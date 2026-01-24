@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 from data.rules import RULES
 from data.bloxd_faq import BLOXD_FAQ
+from commands.ai_commands import handle_ai_message
 
 # Load token
 load_dotenv()
@@ -59,17 +60,23 @@ async def on_member_join(member):
 # DM Help Center
 @bot.event
 async def on_message(message):
-    if message.author == bot.user:
+    if message.author.bot:
         return
 
+    # AI trigger
+    if "dowi" in message.content.lower():
+        await handle_ai_message(message)
+        return  # stop here so AI only triggers
+
+    # DM auto responder
     if isinstance(message.channel, discord.DMChannel):
         content = message.content.lower()
 
         # Rules
         if "rules" in content or "server" in content:
             rules_text = "**Server Rules:**\n"
-            for i, rule in enumerate(RULES, start=1):
-                rules_text += f"{i}. {rule}\n"
+            for rule in RULES:
+                rules_text += f"{rule}\n"
             await message.channel.send(rules_text)
             return
 
