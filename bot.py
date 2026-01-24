@@ -61,14 +61,14 @@ async def on_member_join(member):
 @bot.event
 async def on_message(message):
     if message.author.bot:
-        return
+        return  # ignore bots
 
-    # AI trigger
+    # --- AI Trigger ---
     if "dowi" in message.content.lower():
         await handle_ai_message(message)
-        return  # stop here so AI only triggers
+        return  # stop further processing so it doesn't send fallback messages
 
-    # DM auto responder
+    # --- DM Auto-responder ---
     if isinstance(message.channel, discord.DMChannel):
         content = message.content.lower()
 
@@ -86,11 +86,14 @@ async def on_message(message):
                 await message.channel.send(a)
                 return
 
+        # Fallback
         await message.channel.send(
             "I can help with **server rules** or **Bloxd.io questions**.\n"
             "Try asking something specific 🙂"
         )
+        return
 
+    # --- Let regular commands work ---
     await bot.process_commands(message)
 
 # Start bot
