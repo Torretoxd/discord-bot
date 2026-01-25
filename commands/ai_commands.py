@@ -22,6 +22,7 @@ async def handle_ai_message(message):
             "Please wait a bit before asking another question 😉"
         )
         return
+
     user_cooldowns[user_id] = now
 
     # Remove "Dowi" trigger
@@ -31,19 +32,19 @@ async def handle_ai_message(message):
         return
 
     try:
-        # Ask OpenAI
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": question}],
             max_tokens=150,
             temperature=0.7
         )
+
         answer = response.choices[0].message.content
         await message.channel.send(answer)
-        
+
     except Exception as e:
-    print("AI ERROR:", repr(e))
-    await message.channel.send(
-        "⚠️ AI error occurred.\n"
-        "The owner should check the Railway logs."
-    )
+        print("AI ERROR:", repr(e))
+        await message.channel.send(
+            "⚠️ AI error occurred.\n"
+            "The owner should check the Railway logs."
+        )
