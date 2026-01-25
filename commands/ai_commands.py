@@ -40,6 +40,7 @@ async def handle_ai_message(message):
         )
         answer = response.choices[0].message.content
         await message.channel.send(answer)
+        
     except Exception as e:
     print("AI ERROR:", repr(e))
     await message.channel.send(
