@@ -1,53 +1,54 @@
-import discord
 import asyncio
 import os
-from dotenv import load_dotenv
-from openai import OpenAI
+import requests
 
-load_dotenv()
+HF_API_KEY = os.getenv("HF_API_KEY")
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Free, lightweight model (good for short answers)
+MODEL_URL = "https://api-inference.huggingface.co/models/google/flan-t5-base"
 
-# Cooldowns per user
+headers = {
+    "Authorization": f"Bearer {HF_API_KEY}"
+}
+
 user_cooldowns = {}
 COOLDOWN = 30  # seconds
+
 
 async def handle_ai_message(message):
     user_id = message.author.id
     now = asyncio.get_event_loop().time()
 
-    # Rate limit
+    # Cooldown check
     if user_id in user_cooldowns and now - user_cooldowns[user_id] < COOLDOWN:
-        await message.channel.send(
-            "Please wait a bit before asking another question 😉"
-        )
+        await message.channel.send("Slow down 😄 give me a moment.")
         return
 
     user_cooldowns[user_id] = now
 
-    # Remove trigger word
+    # Extract question
     question = message.content.lower().replace("dowi", "").replace(",", "").strip()
     if not question:
-        await message.channel.send("Yes? What’s your question?")
+        await message.channel.send("Yes? What do you want to know?")
         return
 
-    try:
-        response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are Dowi, a helpful Bloxd.io assistant."},
-                {"role": "user", "content": question}
-            ],
-            max_tokens=150,
-            temperature=0.7
-        )
+    payload = {
+        "inputs": f"Answer briefly and clearly: {question}",
+        "parameters": {
+            "max_new_tokens": 200
+        }
+    }
 
-        answer = response.choices[0].message.content
-        await message.channel.send(answer)
+    try:
+        response = requests.post(MODEL_URL, headers=headers, json=payload, timeout=30)
+        data = response.json()
+
+        if isinstance(data, list) and "generated_text" in data[0]:
+            answer = data[0]["generated_text"]
+            await message.channel.send(answer)
+        else:
+            await message.channel.send("I couldn’t think of a good answer 🤔")
 
     except Exception as e:
-        print("AI ERROR:", repr(e))
-        await message.channel.send(
-            "⚠️ AI error occurred.\n"
-            "The owner should check the Railway logs."
-        )
+        print("HF AI ERROR:", repr(e))
+        await message.channel.send("My brain lagged a bit 😵 try again soon.")
