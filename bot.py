@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 
 from data.rules import RULES
 from data.bloxd_faq import BLOXD_FAQ
-from commands.ai_commands import handle_ai_message
 
 # Load token
 load_dotenv()
@@ -62,11 +61,6 @@ async def on_member_join(member):
 async def on_message(message):
     if message.author.bot:
         return  # ignore bots
-
-    # --- AI Trigger ---
-    if "dowi" in message.content.lower():
-        await handle_ai_message(message)
-        return  # stop further processing so it doesn't send fallback messages
 
     # --- DM Auto-responder ---
     if isinstance(message.channel, discord.DMChannel):
