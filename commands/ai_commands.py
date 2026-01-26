@@ -43,11 +43,24 @@ async def handle_ai_message(message):
         response = requests.post(MODEL_URL, headers=headers, json=payload, timeout=30)
         data = response.json()
 
-        if isinstance(data, list) and "generated_text" in data[0]:
-            answer = data[0]["generated_text"]
-            await message.channel.send(answer)
-        else:
-            await message.channel.send("I couldn’t think of a good answer 🤔")
+    # Hugging Face can return different formats
+    if isinstance(data, list) and len(data) > 0:
+        answer = data[0].get("generated_text")
+        if answer:
+            await message.channel.send(answer.strip())
+            return
+
+    # Model loading / error message
+    if isinstance(data, dict) and "error" in data:
+        await message.channel.send(
+            "🧠 I’m warming up… try again in a few seconds!"
+        )
+        print("HF MODEL ERROR:", data)
+        return
+
+    # Fallback
+    await message.channel.send("I couldn’t think of a good answer 🤔")
+    print("HF RAW RESPONSE:", data)
 
     except Exception as e:
         print("HF AI ERROR:", repr(e))
