@@ -5,7 +5,7 @@ import requests
 HF_API_KEY = os.getenv("HF_API_KEY")
 
 # Free but smart model
-MODEL_URL = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
+MODEL_URL = "https://router.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
 
 headers = {
     "Authorization": f"Bearer {HF_API_KEY}"
