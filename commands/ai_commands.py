@@ -5,7 +5,7 @@ import requests
 HF_API_KEY = os.getenv("HF_API_KEY")
 
 # Free but smart model
-MODEL_URL = "https://router.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2"
+MODEL_URL = "https://router.huggingface.co/models/google/flan-t5-large"
 
 headers = {
     "Authorization": f"Bearer {HF_API_KEY}"
@@ -45,36 +45,30 @@ async def handle_ai_message(message):
         }
     }
 
+try:
+    response = requests.post(MODEL_URL, headers=headers, json=payload, timeout=30)
+
     try:
-        response = requests.post(
-            MODEL_URL,
-            headers=headers,
-            json=payload,
-            timeout=30
-        )
         data = response.json()
+    except ValueError:
+        print("HF NON-JSON RESPONSE:", response.text)
+        await message.channel.send("The AI didn’t respond properly 😵 try again.")
+        return
 
-        # Normal successful response
-        if isinstance(data, list) and len(data) > 0:
-            answer = data[0].get("generated_text")
-            if answer:
-                await message.channel.send(answer.strip())
-                return
-
-        # Model loading or HF error
-        if isinstance(data, dict) and "error" in data:
-            await message.channel.send(
-                "🧠 I’m waking up… try again in a few seconds!"
-            )
-            print("HF MODEL ERROR:", data)
+    if isinstance(data, list) and len(data) > 0:
+        answer = data[0].get("generated_text")
+        if answer:
+            await message.channel.send(answer.strip())
             return
 
-        # Fallback
-        await message.channel.send("I couldn’t think of a good answer 🤔")
-        print("HF RAW RESPONSE:", data)
+    if isinstance(data, dict) and "error" in data:
+        print("HF MODEL ERROR:", data)
+        await message.channel.send("🧠 I’m warming up… try again shortly!")
+        return
 
-    except Exception as e:
-        print("HF AI ERROR:", repr(e))
-        await message.channel.send(
-            "My brain lagged a bit 😵 try again soon."
-        )
+    await message.channel.send("I couldn’t think of a good answer 🤔")
+    print("HF RAW RESPONSE:", data)
+
+except Exception as e:
+    print("HF AI ERROR:", repr(e))
+    await message.channel.send("My brain lagged a bit 😵 try again soon.")
