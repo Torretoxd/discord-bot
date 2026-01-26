@@ -1,27 +1,77 @@
 SMART_ANSWERS = {
+
+    # ======================
     # BedWars
+    # ======================
+
+    "bedwars": "🛏️ BedWars is a team-based mode where you protect your bed and destroy enemy beds to stop respawns.",
+
     "bedwars strategy": (
         "🛏️ **BedWars Strategy Tips:**\n"
-        "• Rush early to break beds\n"
-        "• Upgrade forge first\n"
-        "• Protect your bed with layers\n"
-        "• Control mid for emeralds\n"
-        "• Don’t over-stack diamonds"
+        "• Rush early to eliminate nearby teams\n"
+        "• Upgrade your generator first\n"
+        "• Defend your bed but don’t overdo it\n"
+        "• Control mid for moonstone\n"
+        "• Keep pressure on other teams"
     ),
 
-    "how to win bedwars": (
+    "win bedwars": (
         "To win BedWars:\n"
-        "1️⃣ Break enemy beds early\n"
-        "2️⃣ Play aggressive, not defensive\n"
-        "3️⃣ Team upgrades > personal gear\n"
-        "4️⃣ Control mid"
+        "1️⃣ Break beds early\n"
+        "2️⃣ Upgrade team upgrades\n"
+        "3️⃣ Control mid\n"
+        "4️⃣ Keep attacking"
     ),
 
-    # Bloxd
-    "bloxd": "Bloxd.io is a voxel-style multiplayer game with PvP, parkour, and survival modes.",
+    # ======================
+    # SkyWars
+    # ======================
 
-    "bloxd bedwars": "Bloxd BedWars is about rushing, teamwork, and resource control.",
+    "skywars": "☁️ SkyWars is a fast-paced PvP mode on floating islands.",
 
-    # General
-    "help": "You can ask me about **rules**, **Bloxd.io**, or **BedWars** 🙂",
+    "play skywars": (
+        "☁️ **How to Play SkyWars:**\n"
+        "• Loot your island immediately\n"
+        "• Rush nearby players early\n"
+        "• Go mid first if possible\n"
+        "• Avoid falling into the void"
+    ),
+
+    "win skywars": (
+        "To win SkyWars:\n"
+        "1️⃣ Loot fast\n"
+        "2️⃣ Eliminate nearby enemies\n"
+        "3️⃣ Control mid\n"
+        "4️⃣ Clean up remaining players"
+    ),
+
+    # ======================
+    # Survival
+    # ======================
+
+    "survival": "🌳 Survival is about gathering resources, building, and long-term progression.",
+
+    "start survival": (
+        "🏕️ **Starting Survival:**\n"
+        "• Run away from spawn\n"
+        "• Collect wood\n"
+        "• Upgrade tools\n"
+        "• Mine iron early"
+    ),
+
+    # ======================
+    # Bloxd.io General
+    # ======================
+
+    "bloxd": "Bloxd.io is a voxel-style multiplayer game with PvP, survival, and competitive modes.",
+
+    "help": (
+        "You can ask me about:\n"
+        "• BedWars\n"
+        "• SkyWars\n"
+        "• Survival\n"
+        "• One Block\n"
+        "• 99 Nights\n"
+        "• Ranked Duels"
+    ),
 }
