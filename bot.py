@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 
 from data.rules import RULES
 from data.bloxd_faq import BLOXD_FAQ
+from data.smart_answers import SMART_ANSWERS
 
 # Load token
 load_dotenv()
@@ -27,9 +28,8 @@ initial_extensions = [
     "commands.help_commands",
     "commands.bloxd_commands",
     "commands.rules_commands",
-    "commands.bloxd_tutorials",  # <-- NEW
+    "commands.bloxd_tutorials",
 ]
-
 
 @bot.event
 async def on_ready():
@@ -56,15 +56,22 @@ async def on_member_join(member):
     except discord.Forbidden:
         pass
 
-# DM Help Center
+# Message handler
 @bot.event
 async def on_message(message):
     if message.author.bot:
-        return  # ignore bots
+        return
+
+    content = message.content.lower()
+
+    # --- Smart Answer System (works in DMs + servers) ---
+    for keyword, answer in SMART_ANSWERS.items():
+        if keyword in content:
+            await message.channel.send(answer)
+            return
 
     # --- DM Auto-responder ---
     if isinstance(message.channel, discord.DMChannel):
-        content = message.content.lower()
 
         # Rules
         if "rules" in content or "server" in content:
@@ -82,12 +89,12 @@ async def on_message(message):
 
         # Fallback
         await message.channel.send(
-            "I can help with **server rules** or **Bloxd.io questions**.\n"
+            "I can help with **server rules**, **Bloxd.io**, or **BedWars**.\n"
             "Try asking something specific 🙂"
         )
         return
 
-    # --- Let regular commands work ---
+    # Let normal commands work
     await bot.process_commands(message)
 
 # Start bot
