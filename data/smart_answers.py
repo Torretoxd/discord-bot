@@ -332,6 +332,7 @@ SMART_ANSWERS = [
             "• Avoid falling into the void"
         )
     },
+    {    
         "keywords": ["play", "skywars"],
         "answer": (
             "☁️ **How to Play SkyWars:**\n"
