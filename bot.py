@@ -65,11 +65,20 @@ async def on_message(message):
     content = message.content.lower()
 
     # --- Smart Answer System (works in DMs + servers) ---
+    best_match = None
+    best_length = 0
+
     for entry in SMART_ANSWERS:
         for keyword in entry["keywords"]:
-            if keyword in content:
-                await message.channel.send(entry["answer"])
-                return
+            if keyword in content and len(keyword) > best_length:
+                best_match = entry["answer"]
+                best_length = len(keyword)
+
+    if best_match:
+        await message.channel.send(best_match)
+        return
+
+
 
 
     # --- DM Auto-responder ---
