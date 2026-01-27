@@ -1,4 +1,4 @@
-SMART_ANSWERS = [
+SMART_ANSWERS = {
 
     # ======================
     # BedWars
@@ -314,72 +314,97 @@ SMART_ANSWERS = [
         "keywords": ["rush", "early"],
         "answer": "🛏️ Early rushing gives a huge advantage."
     },
-
-    # ======================
+# ======================
     # SkyWars
     # ======================
 
-    "skywars": "☁️ SkyWars is a fast-paced PvP mode on floating islands.",
+{
+    "skywars_basic": {
+        "keywords": ["skywars"],
+        "answer": "☁️ SkyWars is a fast-paced PvP mode on floating islands."
+    },
 
-    "play skywars": (
-        "☁️ **How to Play SkyWars:**\n"
-        "• Loot your island immediately\n"
-        "• Rush nearby players early\n"
-        "• Go mid first if possible\n"
-        "• Avoid falling into the void"
-    ),
+    "skywars_play": {
+        "keywords": ["play", "skywars"],
+        "answer": (
+            "☁️ **How to Play SkyWars:**\n"
+            "• Loot your island immediately\n"
+            "• Rush nearby players early\n"
+            "• Go mid first if possible\n"
+            "• Avoid falling into the void"
+        )
+    },
 
-    "win skywars": (
-        "To win SkyWars:\n"
-        "1️⃣ Loot fast\n"
-        "2️⃣ Eliminate nearby enemies\n"
-        "3️⃣ Control mid\n"
-        "4️⃣ Clean up remaining players"
-    ),
+    "skywars_win": {
+        "keywords": ["win", "skywars"],
+        "answer": (
+            "To win SkyWars:\n"
+            "1️⃣ Loot fast\n"
+            "2️⃣ Eliminate nearby enemies\n"
+            "3️⃣ Control mid\n"
+            "4️⃣ Clean up remaining players"
+        )
+    },
 
-    "how skywars": (
-        "☁️ **How to Play SkyWars:**\n"
-        "• Loot your island immediately\n"
-        "• Rush nearby players early\n"
-        "• Go mid first if possible\n"
-        "• Avoid falling into the void"
-    ),
+    "skywars_how": {
+        "keywords": ["how", "skywars"],
+        "answer": (
+            "☁️ **How to Play SkyWars:**\n"
+            "• Loot your island immediately\n"
+            "• Rush nearby players early\n"
+            "• Go mid first if possible\n"
+            "• Avoid falling into the void"
+        )
+    },
 
-    "what goal skywars" :(
-        "**☁️ The goal of skywars**\n"
-        "• Eliminate all other players and be the last one standing."
-    ),
-
-
+    "skywars_goal": {
+        "keywords": ["what", "goal", "skywars"],
+        "answer": (
+            "**☁️ The goal of skywars**\n"
+            "• Eliminate all other players and be the last one standing."
+        )
+    },
 
     # ======================
     # Survival
     # ======================
 
-    "survival": "🌳 Survival is about gathering resources, building, and long-term progression.",
+    "survival_basic": {
+        "keywords": ["survival"],
+        "answer": "🌳 Survival is about gathering resources, building, and long-term progression."
+    },
 
-    "start survival": (
-        "🏕️ **Starting Survival:**\n"
-        "• Run away from spawn\n"
-        "• Collect wood\n"
-        "• Upgrade tools\n"
-        "• Mine iron early"
-    ),
+    "survival_start": {
+        "keywords": ["start", "survival"],
+        "answer": (
+            "🏕️ **Starting Survival:**\n"
+            "• Run away from spawn\n"
+            "• Collect wood\n"
+            "• Upgrade tools\n"
+            "• Mine iron early"
+        )
+    },
 
     # ======================
     # Bloxd.io General
     # ======================
 
-    "bloxd": "Bloxd.io is a voxel-style multiplayer game with PvP, survival, and competitive modes.",
+    "bloxd_basic": {
+        "keywords": ["bloxd"],
+        "answer": "Bloxd.io is a voxel-style multiplayer game with PvP, survival, and competitive modes."
+    },
 
-    "help": (
-        "You can ask me about:\n"
-        "• BedWars\n"
-        "• SkyWars\n"
-        "• Survival\n"
-        "• One Block\n"
-        "• 99 Nights\n"
-        "• Ranked Duels"
-    ),
-]
+    "help": {
+        "keywords": ["help"],
+        "answer": (
+            "You can ask me about:\n"
+            "• BedWars\n"
+            "• SkyWars\n"
+            "• Survival\n"
+            "• One Block\n"
+            "• 99 Nights\n"
+            "• Ranked Duels"
+        )
+    }
 
+}
