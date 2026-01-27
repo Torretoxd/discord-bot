@@ -98,11 +98,11 @@ SMART_ANSWERS = {
 
     "bedwars fights pvp": "🛏️ Hit first, control movement, and avoid falling into the void.",
 
-    "bedwars not fall bridge / bridging": "🛏️ Look around often, crouch when needed, and expect enemies.",
+    "bedwars not fall bridge or bridging": "🛏️ Look around often, crouch when needed, and expect enemies.",
 
-    "bedwars fast / quick bridge / bridging": "🛏️ They practice movement timing and place blocks efficiently.",
+    "bedwars fast or quick bridge or bridging": "🛏️ They practice movement timing and place blocks efficiently.",
 
-    "bedwars combo pvp / fights": "🛏️ Keep consistent hits while strafing and controlling distance.",
+    "bedwars combo pvp or fights": "🛏️ Keep consistent hits while strafing and controlling distance.",
 
 
     # ======================
@@ -119,7 +119,7 @@ SMART_ANSWERS = {
         "• Stay alert"
     ),
 
-    "bewdwars layer or rush": "🛏️ Rushing is usually more effective than heavy layering.",
+    "bedwars layer or rush": "🛏️ Rushing is usually more effective than heavy layering.",
 
     "bedwars defend bed": "🛏️ Light defense is worth it, but full camping is not.",
 
@@ -153,13 +153,13 @@ SMART_ANSWERS = {
     # Team Play
     # ======================
 
-    "bedwars random teeammates / teamates": "🛏️ Play aggressive and don’t rely on teammates too much.",
+    "bedwars random teeammates or teamates": "🛏️ Play aggressive and don’t rely on teammates too much.",
 
-    "bedwars teammates / teamate job": "🛏️ Rushing, upgrading, or defending depending on situation.",
+    "bedwars teammates or teamate job": "🛏️ Rushing, upgrading, or defending depending on situation.",
 
     "bedwars one defender": "🛏️ One light defender early can help, but not always needed.",
 
-    "bedwars talk with team / teammates / teamates": "🛏️ Use quick messages and clear callouts in team chat (press tab while chat is open to talk in team chat).",
+    "bedwars talk with team or teammates or teamates": "🛏️ Use quick messages and clear callouts in team chat (press tab while chat is open to talk in team chat).",
 
     "bedwars bad team": "🛏️ Play more independently and focus on carrying.",
 
@@ -174,11 +174,9 @@ SMART_ANSWERS = {
 
     "bedwars team upgrades": "🛏️ Yes, team upgrades benefit everyone.",
 
-    "bedwars best upgrade / upgrades": "🛏️ Protection, damage, and generator speed.",
-
-    "bedwars last upgrade": "🛏️ When upgrades no longer give value compared to rushing.",
+    "bedwars best upgrade or upgrades": "🛏️ Protection, damage, and generator speed.",
     
-    "bedwars best upgrade / upgrades": "🛏️ First Protection, then damage, and lastly generator speed.",
+    "bedwars best upgrade or upgrades": "🛏️ First Protection, then damage, and lastly generator speed.",
 
     # ======================
     # Late Game
@@ -203,45 +201,45 @@ SMART_ANSWERS = {
     # Mistakes & Problems
     # ======================
 
-    "why do i keep losing bedwars": "🛏️ You may be rushing too late or upgrading inefficiently.",
+    "losing bedwars": "🛏️ You may be rushing too late or upgrading inefficiently.",
 
-    "why do i die so fast": "🛏️ Poor positioning or bad timing in fights.",
+    "bedwars die fast": "🛏️ Poor positioning or bad timing in fights.",
 
-    "why does everyone target my bed": "🛏️ Early beds are easier targets.",
+    "bedwars bed target or targetted": "🛏️ Early beds are easier targets.",
 
-    "why am i always last alive": "🛏️ Teammates die early, leaving you solo.",
+    "bedwars last alive": "🛏️ Teammates die early, leaving you solo.",
 
-    "what am i doing wrong in bedwars": "🛏️ Likely playing too passive or not controlling mid.",
+    "bedwars doing wrong": "🛏️ Likely playing too passive or not controlling mid.",
 
 
     # ======================
     # Advanced / Tryhard
     # ======================
 
-    "whats the fastest bedwars win": "🛏️ Early double rush with clean PvP.",
+    "bedwars fast win": "🛏️ Early double rush with clean PvP.",
 
-    "how do good players win so easily": "🛏️ They rush early, control mid, and avoid mistakes.",
+    "bedwars good players win": "🛏️ They rush early, control mid, and avoid mistakes.",
 
-    "how do i play aggressive but safe": "🛏️ Apply pressure while watching surroundings.",
+    "bedwars aggressive": "🛏️ Apply pressure while watching surroundings.",
 
-    "how do i snowball a game": "🛏️ Early kills lead to upgrades which lead to more kills.",
+    "bedwars easy kills": "🛏️ Early kills lead to upgrades which lead to more kills.",
 
-    "how do i carry my team": "🛏️ Rush, get upgrades, and lead fights.",
+    "bedwars carry team": "🛏️ Rush, get upgrades, and lead fights.",
 
 
     # ======================
     # Casual / Random
     # ======================
 
-    "is bedwars luck based": "🛏️ Skill matters more than luck.",
+    "bedwars luck based": "🛏️ Skill matters more than luck.",
 
-    "is bedwars harder solo": "🛏️ Yes, solo play is more challenging.",
+    "bedwars harder solo": "🛏️ Yes, solo play is more challenging.",
 
-    "is rushing toxic": "🛏️ No, rushing is a core mechanic.",
+    "bedwars rushing toxic": "🛏️ No, rushing is a core mechanic.",
 
-    "why do people camp generators": "🛏️ They are playing too passive.",
+    "bedwars camp generator": "🛏️ They are playing too passive.",
 
-    "why do people rush so early": "🛏️ Early rushing gives a huge advantage."
+    "bedwars rush early": "🛏️ Early rushing gives a huge advantage.",
 
     # ======================
     # SkyWars
