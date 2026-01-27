@@ -405,6 +405,6 @@ SMART_ANSWERS = {
             "• 99 Nights\n"
             "• Ranked Duels"
         )
+        }
     }
-
 }
