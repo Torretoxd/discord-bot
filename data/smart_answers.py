@@ -1,245 +1,319 @@
-SMART_ANSWERS = {
+SMART_ANSWERS = [
 
     # ======================
     # BedWars
     # ======================
 
-    "bedwars": "🛏️ BedWars is a team-based mode where you protect your bed and destroy enemy beds to stop respawns.",
+    {
+        "keywords": ["bedwars"],
+        "answer": "🛏️ BedWars is a team-based mode where you protect your bed and destroy enemy beds to stop respawns."
+    },
 
-    "bedwars strategy": (
-        "🛏️ **BedWars Strategy Tips:**\n"
-        "• Rush early to eliminate nearby teams\n"
-        "• Upgrade your generator first\n"
-        "• Defend your bed but don’t overdo it\n"
-        "• Control mid for moonstone\n"
-        "• Keep pressure on other teams"
-    ),
+    {
+        "keywords": ["what", "bedwars"],
+        "answer": "🛏️ BedWars is a team-based PvP mode where you protect your bed and destroy enemy beds to stop them from respawning."
+    },
 
-    "win bedwars": (
-        "To win BedWars:\n"
-        "1️⃣ Break beds early\n"
-        "2️⃣ Upgrade team upgrades\n"
-        "3️⃣ Control mid\n"
-        "4️⃣ Keep attacking"
-    ),
+    {
+        "keywords": ["play", "bedwars"],
+        "answer": (
+            "🛏️ **How to Play BedWars:**\n"
+            "• Protect your bed so you can respawn\n"
+            "• Collect resources from the generator\n"
+            "• Buy blocks, weapons, and upgrades\n"
+            "• Destroy enemy beds\n"
+            "• Eliminate all players to win"
+        )
+    },
 
-    "what bedwars": "🛏️ BedWars is a team-based PvP mode where you protect your bed and destroy enemy beds to stop them from respawning.",
+    {
+        "keywords": ["goal", "bedwars"],
+        "answer": "🛏️ The goal is to destroy enemy beds and eliminate all opposing players."
+    },
 
-    "play bedwars": (
-        "🛏️ **How to Play BedWars:**\n"
-        "• Protect your bed so you can respawn\n"
-        "• Collect resources from the generator\n"
-        "• Buy blocks, weapons, and upgrades\n"
-        "• Destroy enemy beds\n"
-        "• Eliminate all players to win"
-    ),
+    {
+        "keywords": ["bedwars", "strategy"],
+        "answer": (
+            "🛏️ **BedWars Strategy Tips:**\n"
+            "• Rush early to eliminate nearby teams\n"
+            "• Upgrade your generator first\n"
+            "• Defend your bed but don’t overdo it\n"
+            "• Control mid for moonstone\n"
+            "• Keep pressure on other teams"
+        )
+    },
 
-    "goal bedwars": "🛏️ The goal is to destroy enemy beds and eliminate all opposing players.",
+    {
+        "keywords": ["win", "bedwars"],
+        "answer": (
+            "🛏️ **How to Win BedWars:**\n"
+            "• Break beds early\n"
+            "• Upgrade team upgrades\n"
+            "• Control mid\n"
+            "• Keep attacking"
+        )
+    },
 
-    "respawn bedwars": (
-        "🛏️ **Respawning Explained:**\n"
-        "• You respawn if your bed is alive\n"
-        "• You stop respawning when your bed is broken\n"
-        "• After bed destruction, death is permanent"
-    ),
+    {
+        "keywords": ["respawn", "bedwars"],
+        "answer": (
+            "🛏️ **Respawning Explained:**\n"
+            "• You respawn if your bed is alive\n"
+            "• You stop respawning when your bed is broken\n"
+            "• After bed destruction, death is permanent"
+        )
+    },
 
-    "bed broken": "🛏️ When your bed breaks, you can no longer respawn and must survive until the end.",
+    {
+        "keywords": ["bed", "broken"],
+        "answer": "🛏️ When your bed breaks, you can no longer respawn and must survive until the end."
+    },
 
-    "win without bed": "🛏️ No, enemies will keep respawning until their bed is destroyed.",
+    {
+        "keywords": ["win", "without", "bed"],
+        "answer": "🛏️ No, enemies will keep respawning until their bed is destroyed."
+    },
 
-    "bedwars teams": "🛏️ BedWars usually has multiple teams depending on the map, but team sizes can vary from solos (1 player) to squads (4 players).",
-
-    "is bedwars solo or teams": "🛏️ BedWars is mainly team-based, but team sizes can vary from solos (1 player) to squads (4 players).",
-
+    {
+        "keywords": ["bedwars", "teams"],
+        "answer": "🛏️ BedWars usually has teams ranging from solos (1 player) to squads (4 players)."
+    },
 
     # ======================
     # Resources & Economy
     # ======================
 
-    "bedwars generator": "🛏️ The generator produces resources your team uses to buy items and upgrades.",
+    {
+        "keywords": ["bedwars", "generator"],
+        "answer": "🛏️ The generator produces resources your team uses to buy items and upgrades."
+    },
 
-    "bedwars generator upgrade": (
-        "🛏️ **Generator Upgrades:**\n"
-        "• Collect diamonds or moonstone\n"
-        "• Buy team upgrades\n"
-        "• Upgrades increase resource speed"
-    ),
+    {
+        "keywords": ["generator", "upgrade"],
+        "answer": (
+            "🛏️ **Generator Upgrades:**\n"
+            "• Collect diamonds or moonstone\n"
+            "• Buy team upgrades\n"
+            "• Upgrades increase resource speed"
+        )
+    },
 
-    "bedwars moonstone use": "🛏️ Moonstone is used for powerful upgrades and late-game items.",
+    {
+        "keywords": ["moonstone", "use"],
+        "answer": "🛏️ Moonstone is used for powerful upgrades and late-game items."
+    },
 
-    "bedwars moonstone where ": "🛏️ Moonstone is found at the middle of the map, or on smaller islands around team bases.",
+    {
+        "keywords": ["moonstone", "where"],
+        "answer": "🛏️ Moonstone is found in the middle of the map or nearby islands."
+    },
 
-    "bedwars diamonds use": "🛏️ Diamonds are used for team upgrades like protection and damage.",
+    {
+        "keywords": ["diamonds", "use"],
+        "answer": "🛏️ Diamonds are used for team upgrades like protection and damage."
+    },
 
-    "bedwars spend diamonds": "🛏️ Spend diamonds early on team upgrades instead of hoarding them.",
+    {
+        "keywords": ["spend", "diamonds"],
+        "answer": "🛏️ Spend diamonds early on team upgrades instead of hoarding them."
+    },
 
-    "bedwars moonstone or diamonds": "🛏️ Moonstone is stronger late-game, but diamonds are more important early.",
+    {
+        "keywords": ["moonstone", "diamonds"],
+        "answer": "🛏️ Diamonds are better early-game, moonstone is stronger late-game."
+    },
 
-    "bedwars blocks early": "🛏️ Around 50–60 blocks is ideal for early rushing.",
-
+    {
+        "keywords": ["blocks", "early"],
+        "answer": "🛏️ Around 50–60 blocks is ideal for early rushing."
+    },
 
     # ======================
     # Rushing & PvP
     # ======================
 
-    "bedwars rush quickly": (
-        "🛏️ **Rushing Guide:**\n"
-        "• Buy blocks immediately\n"
-        "• Bridge to nearest enemy\n"
-        "• Fight before they gear up\n"
-        "• Break their bed fast"
-    ),
+    {
+        "keywords": ["rush", "quickly"],
+        "answer": (
+            "🛏️ **Rushing Guide:**\n"
+            "• Buy blocks immediately\n"
+            "• Bridge to nearest enemy\n"
+            "• Fight before they gear up\n"
+            "• Break their bed fast"
+        )
+    },
 
-    "when should i rush in bedwars": "🛏️ Rush as early as possible before enemies get upgrades.",
+    {
+        "keywords": ["when", "rush"],
+        "answer": "🛏️ Rush as early as possible before enemies get upgrades."
+    },
 
-    "bedwars blocks rush quickly": "🛏️ 50–60 blocks is usually enough for one rush.",
+    {
+        "keywords": ["blocks", "rush"],
+        "answer": "🛏️ 50–60 blocks is usually enough for one rush."
+    },
 
-    "bedwars rush or defend": "🛏️ Rushing early is usually better than heavy defense.",
+    {
+        "keywords": ["rush", "defend"],
+        "answer": "🛏️ Rushing early is usually better than heavy defense."
+    },
 
-    "bedwars fights pvp": "🛏️ Hit first, control movement, and avoid falling into the void.",
+    {
+        "keywords": ["pvp", "fights"],
+        "answer": "🛏️ Hit first, control movement, and avoid falling into the void."
+    },
 
-    "bedwars not fall bridge or bridging": "🛏️ Look around often, crouch when needed, and expect enemies.",
+    {
+        "keywords": ["bridge", "fall"],
+        "answer": "🛏️ Look around often, crouch when needed, and expect enemies."
+    },
 
-    "bedwars fast or quick bridge or bridging": "🛏️ They practice movement timing and place blocks efficiently.",
+    {
+        "keywords": ["fast", "bridge"],
+        "answer": "🛏️ Fast bridgers practice timing and efficient block placement."
+    },
 
-    "bedwars combo pvp or fights": "🛏️ Keep consistent hits while strafing and controlling distance.",
-
+    {
+        "keywords": ["combo", "pvp"],
+        "answer": "🛏️ Keep consistent hits while strafing and controlling distance."
+    },
 
     # ======================
     # Bed Defense
     # ======================
 
-    "bedwars best bed defense": "🛏️ A simple layered defense that doesn’t waste time is best.",
+    {
+        "keywords": ["best", "defense"],
+        "answer": "🛏️ A simple layered defense that doesn’t waste time is best."
+    },
 
-    "bedwars protect bed": (
-        "🛏️ **Bed Protection Tips:**\n"
-        "• Add basic layers of wool around bed\n"
-        "• Watch for early rushes\n"
-        "• Don’t overbuild\n"
-        "• Stay alert"
-    ),
+    {
+        "keywords": ["protect", "bed"],
+        "answer": (
+            "🛏️ **Bed Protection Tips:**\n"
+            "• Add basic layers\n"
+            "• Watch early rushes\n"
+            "• Don’t overbuild\n"
+            "• Stay alert"
+        )
+    },
 
-    "bedwars layer or rush": "🛏️ Rushing is usually more effective than heavy layering.",
+    {
+        "keywords": ["layer", "rush"],
+        "answer": "🛏️ Rushing is usually more effective than heavy layering."
+    },
 
-    "bedwars defend bed": "🛏️ Light defense is worth it, but full camping is not.",
+    {
+        "keywords": ["defend", "bed"],
+        "answer": "🛏️ Light defense is useful, but full camping is not."
+    },
 
-    "bedwars bed broken fast": "🛏️ They rush early and catch you unprepared.",
-
-    "bedwars bed defense placement": "🛏️ Directly around the bed without blocking teammates.",
-
+    {
+        "keywords": ["bed", "broken", "fast"],
+        "answer": "🛏️ Enemies rushed early and caught you unprepared."
+    },
 
     # ======================
     # Mid Control
     # ======================
 
-    "bedwars go mid": "🛏️ After your first rush and basic upgrades.",
+    {
+        "keywords": ["go", "mid"],
+        "answer": "🛏️ Go mid after your first rush and basic upgrades."
+    },
 
-    "bedwars mid danger": "🛏️ Yes, mid is risky but very rewarding.",
+    {
+        "keywords": ["mid", "danger"],
+        "answer": "🛏️ Mid is risky but very rewarding."
+    },
 
-    "bedwars control mid": (
-        "🛏️ **Mid Control:**\n"
-        "• Arrive early\n"
-        "• Eliminate enemies\n"
-        "• Watch bridges\n"
-        "• Deny moonstone access"
-    ),
-
-    "bedwars mid important": "🛏️ Mid gives moonstone which leads to strong upgrades.",
-
-    "bedwars stop enemies mid": "🛏️ Rush mid early and pressure anyone trying to enter.",
-
+    {
+        "keywords": ["control", "mid"],
+        "answer": (
+            "🛏️ **Mid Control:**\n"
+            "• Arrive early\n"
+            "• Eliminate enemies\n"
+            "• Watch bridges\n"
+            "• Deny moonstone"
+        )
+    },
 
     # ======================
     # Team Play
     # ======================
 
-    "bedwars random teeammates or teamates": "🛏️ Play aggressive and don’t rely on teammates too much.",
+    {
+        "keywords": ["random", "teammates"],
+        "answer": "🛏️ Play aggressive and don’t rely too much on teammates."
+    },
 
-    "bedwars teammates or teamate job": "🛏️ Rushing, upgrading, or defending depending on situation.",
-
-    "bedwars one defender": "🛏️ One light defender early can help, but not always needed.",
-
-    "bedwars talk with team or teammates or teamates": "🛏️ Use quick messages and clear callouts in team chat (press tab while chat is open to talk in team chat).",
-
-    "bedwars bad team": "🛏️ Play more independently and focus on carrying.",
-
+    {
+        "keywords": ["bad", "team"],
+        "answer": "🛏️ Play independently and focus on carrying."
+    },
 
     # ======================
     # Gear & Upgrades
     # ======================
 
-    "bedwars upgrade first": "🛏️ Team protection or damage is usually best first.",
+    {
+        "keywords": ["upgrade", "first"],
+        "answer": "🛏️ Protection or damage is usually best first."
+    },
 
-    "bedwars armor or sword": "🛏️ Armor first for survivability.",
+    {
+        "keywords": ["armor", "sword"],
+        "answer": "🛏️ Armor first for survivability."
+    },
 
-    "bedwars team upgrades": "🛏️ Yes, team upgrades benefit everyone.",
-
-    "bedwars best upgrade or upgrades": "🛏️ Protection, damage, and generator speed.",
-    
-    "bedwars best upgrade or upgrades": "🛏️ First Protection, then damage, and lastly generator speed.",
+    {
+        "keywords": ["best", "upgrade"],
+        "answer": "🛏️ First protection, then damage, then generator speed."
+    },
 
     # ======================
     # Late Game
     # ======================
 
-    "bedwars late game win": (
-        "🛏️ **Late Game Tips:**\n"
-        "• Control mid\n"
-        "• Deny moonstone\n"
-        "• Stick together\n"
-        "• Play carefully"
-    ),
+    {
+        "keywords": ["late", "game"],
+        "answer": (
+            "🛏️ **Late Game Tips:**\n"
+            "• Control mid\n"
+            "• Deny moonstone\n"
+            "• Stick together\n"
+            "• Play carefully"
+        )
+    },
 
-    "bedwars bed gone": "🛏️ Play slow, avoid mistakes, and win fights.",
-
-    "bedwars find last player": "🛏️ Check bases, mid, and listen for movement or block-placement.",
-
-    "bedwars long games": "🛏️ Players hide or avoid fights late-game.",
-
-
-    # ======================
-    # Mistakes & Problems
-    # ======================
-
-    "losing bedwars": "🛏️ You may be rushing too late or upgrading inefficiently.",
-
-    "bedwars die fast": "🛏️ Poor positioning or bad timing in fights.",
-
-    "bedwars bed target or targetted": "🛏️ Early beds are easier targets.",
-
-    "bedwars last alive": "🛏️ Teammates die early, leaving you solo.",
-
-    "bedwars doing wrong": "🛏️ Likely playing too passive or not controlling mid.",
-
-
-    # ======================
-    # Advanced / Tryhard
-    # ======================
-
-    "bedwars fast win": "🛏️ Early double rush with clean PvP.",
-
-    "bedwars good players win": "🛏️ They rush early, control mid, and avoid mistakes.",
-
-    "bedwars aggressive": "🛏️ Apply pressure while watching surroundings.",
-
-    "bedwars easy kills": "🛏️ Early kills lead to upgrades which lead to more kills.",
-
-    "bedwars carry team": "🛏️ Rush, get upgrades, and lead fights.",
-
+    {
+        "keywords": ["bed", "gone"],
+        "answer": "🛏️ Play slow, avoid mistakes, and win fights."
+    },
 
     # ======================
     # Casual / Random
     # ======================
 
-    "bedwars luck based": "🛏️ Skill matters more than luck.",
+    {
+        "keywords": ["luck"],
+        "answer": "🛏️ Skill matters more than luck."
+    },
 
-    "bedwars harder solo": "🛏️ Yes, solo play is more challenging.",
+    {
+        "keywords": ["rushing", "toxic"],
+        "answer": "🛏️ No, rushing is a core mechanic."
+    },
 
-    "bedwars rushing toxic": "🛏️ No, rushing is a core mechanic.",
+    {
+        "keywords": ["camp", "generator"],
+        "answer": "🛏️ Generator camping is very passive."
+    },
 
-    "bedwars camp generator": "🛏️ They are playing too passive.",
-
-    "bedwars rush early": "🛏️ Early rushing gives a huge advantage.",
+    {
+        "keywords": ["rush", "early"],
+        "answer": "🛏️ Early rushing gives a huge advantage."
+    },
 
     # ======================
     # SkyWars

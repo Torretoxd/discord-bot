@@ -65,9 +65,9 @@ async def on_message(message):
     content = message.content.lower()
 
     # --- Smart Answer System (works in DMs + servers) ---
-    for keyword, answer in SMART_ANSWERS.items():
-        if keyword in content:
-            await message.channel.send(answer)
+    for entry in SMART_ANSWERS:
+        if all(word in content for word in entry["keywords"]):
+            await message.channel.send(entry["answer"])
             return
 
     # --- DM Auto-responder ---
