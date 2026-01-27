@@ -1,5 +1,4 @@
-SMART_ANSWERS = {
-
+SMART_ANSWERS = [
     # ======================
     # BedWars
     # ======================
@@ -319,12 +318,20 @@ SMART_ANSWERS = {
     # ======================
 
 {
-    "skywars_basic": {
         "keywords": ["skywars"],
         "answer": "☁️ SkyWars is a fast-paced PvP mode on floating islands."
     },
 
-    "skywars_play": {
+    {
+        "keywords": ["play", "skywars"],
+        "answer": (
+            "☁️ **How to Play SkyWars:**\n"
+            "• Loot your island immediately\n"
+            "• Rush nearby players early\n"
+            "• Go mid first if possible\n"
+            "• Avoid falling into the void"
+        )
+    },
         "keywords": ["play", "skywars"],
         "answer": (
             "☁️ **How to Play SkyWars:**\n"
@@ -335,7 +342,7 @@ SMART_ANSWERS = {
         )
     },
 
-    "skywars_win": {
+    {
         "keywords": ["win", "skywars"],
         "answer": (
             "To win SkyWars:\n"
@@ -346,7 +353,7 @@ SMART_ANSWERS = {
         )
     },
 
-    "skywars_how": {
+    {
         "keywords": ["how", "skywars"],
         "answer": (
             "☁️ **How to Play SkyWars:**\n"
@@ -357,7 +364,7 @@ SMART_ANSWERS = {
         )
     },
 
-    "skywars_goal": {
+    {
         "keywords": ["what", "goal", "skywars"],
         "answer": (
             "**☁️ The goal of skywars**\n"
@@ -369,12 +376,12 @@ SMART_ANSWERS = {
     # Survival
     # ======================
 
-    "survival_basic": {
+    {
         "keywords": ["survival"],
         "answer": "🌳 Survival is about gathering resources, building, and long-term progression."
     },
 
-    "survival_start": {
+    {
         "keywords": ["start", "survival"],
         "answer": (
             "🏕️ **Starting Survival:**\n"
@@ -389,12 +396,13 @@ SMART_ANSWERS = {
     # Bloxd.io General
     # ======================
 
-    "bloxd_basic": {
+    {
         "keywords": ["bloxd"],
         "answer": "Bloxd.io is a voxel-style multiplayer game with PvP, survival, and competitive modes."
     },
 
-    "help": {
+    {
+        "keywords": ["help"],
         "keywords": ["help"],
         "answer": (
             "You can ask me about:\n"
@@ -405,6 +413,5 @@ SMART_ANSWERS = {
             "• 99 Nights\n"
             "• Ranked Duels"
         )
-        }
     }
-}
+]
